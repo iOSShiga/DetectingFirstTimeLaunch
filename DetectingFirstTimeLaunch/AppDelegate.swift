@@ -12,11 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var hasalreadyLaunched: Bool!
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
+    }
+    
+    func sethasAlreadyLaunched()  {
+        UserDefaults.standard.hasAlreadyLaunched = true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
